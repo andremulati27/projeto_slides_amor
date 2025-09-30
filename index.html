@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Surpresa</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"/>
+    <link rel="icon" type="image/png" href="logos2.jpg">
+   <body class="bg-dark">/>
+    <style>
+      .hearts {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+      }
+      .heart {
+        position: absolute;
+        opacity: 0.9;
+        animation: float 6s ease-in-out infinite;
+      }
+      @keyframes float {
+        0% {
+          transform: translateY(0px) translateX(0px);
+        }
+        50% {
+          transform: translateY(-20px) translateX(10px);
+        }
+        100% {
+          transform: translateY(0px) translateX(0px);
+        }
+      }
+
+      .btn-roxo{
+        background-color: purple;
+        color: white;
+        border: none;
+      }
+      .btn-roxo:hover{
+        background-color: #800080;
+      }
+    </style>
+  </head>
+
+
+  <body>
+    <div class="container text-center" style="height: 100vh; display: table">
+
+      <div class="hearts"></div>
+
+      <div style="display: table-cell; vertical-align: middle">
+        <a href="pag2.html" target="_blank"><button type="button" class="btn btn-roxo btn-lg">CLIQUE E VEJA!</button></a>
+      </div>
+    </div>
+
+    <script>
+      function createHeart() {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.textContent = "❤️";
+
+        // posição aleatória
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.top = Math.random() * 100 + "vh";
+
+        // tamanho aleatório
+        heart.style.fontSize = Math.random() * 6 + 10 + "px";
+
+        document.querySelector(".hearts").appendChild(heart);
+
+        // remove após 20s
+        setTimeout(() => heart.remove(), 20000);
+      }
+
+      // corações iniciais
+      for (let i = 0; i < 25; i++) createHeart();
+
+      // adiciona novos corações a cada 2s
+      setInterval(createHeart, 2000);
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"> </script>
+  </body>
+</html>

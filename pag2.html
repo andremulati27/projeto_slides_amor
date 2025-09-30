@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Então . . .</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="logos2.jpg"/>
+
+      <style>
+      .pulsar-vermelho {
+      color: red;
+      font-weight: bold;
+      animation: pulse 2.5s infinite;
+      }
+
+      .letra{
+        color: aliceblue;
+        font-weight: bold;
+      }
+
+      .vermelho{
+        color: red;
+        font-weight: bold;
+      }
+
+      .texto-gradiente {
+        background: linear-gradient(to right, #ff4d4d, #c4b5fd);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .roxo{
+        color: #ff4d4d;
+        font-weight: bold;
+        animation: pulse 2.5s infinite;
+      }
+      
+    </style>
+
+
+      <style>
+  /* contador vermelho pulsando */
+  #contador {
+      background: linear-gradient(to right, #ff4d4d, #c4b5fd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+</style>
+
+    <style>
+      /* Fundo dos corações */
+      .hearts {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: -1; /* Mantém atrás do conteúdo */
+      }
+
+      .heart {
+        position: absolute;
+        top: -20px;
+        font-size: 14px; /* Corações pequenos */
+        animation: fall linear forwards;
+        opacity: 0.8;
+      }
+
+      @keyframes fall {
+        to {
+          transform: translateY(110vh);
+          opacity: 0.2;
+        }
+      }
+
+    /*emoji apaixonado */
+    .smile {
+  position: absolute;
+  top: -20px;
+  font-size: 14px; /* tamanho inicial */
+  animation: fallSmiley linear forwards;
+  opacity: 0.8;
+    }
+
+    @keyframes fallSmiley {
+      to {
+        transform: translateY(110vh);
+        opacity: 0.2;
+      }
+    }
+
+    </style>
+  </head>
+
+  <body class="bg-dark">
+    <div class="hearts"></div>
+   
+    <br>
+    <div class="row justify-content-center">
+      <div
+          class="col-4 text-center roxo"
+          style="
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 1.9rem;">
+          <h2>MEU BEM !</h2>
+       </div>
+      </div>
+    <br />
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div
+          id="carouselExampleInterval"
+          class="carousel slide"
+          data-bs-ride="carousel"
+          data-bs-interval="3000">
+          <div class="carousel-inner">
+
+/* 1foto */
+
+            <div class="carousel-item active">
+              <img
+                src="foto01.jpg"
+                class="d-block mx-auto"
+                alt="FOTO 01"
+                width="250px"
+                height="auto"/>
+            </div>
+
+/* 2 foto */
+
+            <div class="carousel-item">
+              <img
+                src="foto02.jpg"
+                class="d-block mx-auto"
+                alt="FOTO 02"
+                width="250px"
+                height="auto"/>
+            </div>
+            
+/* 3 foto */
+
+            <div class="carousel-item">
+              <img
+                src="FOTO3.jpg"
+                class="d-block mx-auto"
+                alt="FOTO 03"
+                width="250px"
+                height="auto"/>
+            </div> 
+          </div>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">foto 01</span>
+          </button>
+
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">FOTO 02</span>
+          </button>
+
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">FOTO 03</span>
+          </button>
+        </div>
+      </div>
+
+      <br>
+
+<div class="row justify-content-center">
+      <div
+          class="col-4 text-center texto-gradiente"
+          style="
+            font-family: 'Great Vibes', cursive;
+            font-size: 1rem;">
+          <h4>Te amo há:</h4>
+       </div>
+      </div>
+
+
+      <!-- CARD DO CONTADOR -->
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <div class="card text-center border-light bg-dark text-white">
+            <div class="card-body">
+              <span
+                id="contador"
+                style="
+                  font-family: 'Comic Sans MS', cursive, sans-serif;
+                  font-size: 1.3rem;">
+              </span>
+            </div>
+            <div class="card-footer border-light text-white">
+              <span
+              class="texto-gradiente"
+                style="
+                  font-family: 'Comic Sans MS', cursive, sans-serif;
+                  font-size: 1rem;">
+                Desde 04/08/2025
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row justify-content-center">
+        <div
+          class="col-4 letra"
+          style="
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, sans-serif;
+            font-size: 50px;">
+          <h6><br>Você é minha Princesa e vou sempre te amar e cuidar de você, aonde eu estiver! <br><br>Você na minha vida me trouxe alegria e paz. <br><br>Estar ao seu lado, é algo que sempre quis e quero para minha vida!<br><br>Hoje tenho certeza que você é a pessoa certa, na hora certa , no momento certo para mim! <br><br> Com você, tudo faz mais sentido, tudo se torna melhor! <br><br> Você é minha inspiração e o meu orgulho!  <br><br>Odeio ficar longe de Você! <br><br>Te amo ! <br> ❤️ <br><br><br><br> Com Amor, Feito pelo André Mulati!</h6>
+        </div>
+      </div>
+    </div>
+
+
+    
+
+    <script>
+      // Data inicial: 04/08/2025 00:00:00
+      const dataInicial = new Date(2025, 7, 4, 0, 0, 0);
+      function atualizarContador() {
+        const agora = new Date();
+        let anos = agora.getFullYear() - dataInicial.getFullYear();
+        let meses = agora.getMonth() - dataInicial.getMonth();
+        let dias = agora.getDate() - dataInicial.getDate();
+        let horas = agora.getHours() - dataInicial.getHours();
+        let minutos = agora.getMinutes() - dataInicial.getMinutes();
+        let segundos = agora.getSeconds() - dataInicial.getSeconds();
+        // Ajustes se algum valor for negativo
+        if (segundos < 0) {
+          segundos += 60;
+          minutos--;
+        }
+        if (minutos < 0) {
+          minutos += 60;
+          horas--;
+        }
+        if (horas < 0) {
+          horas += 24;
+          dias--;
+        }
+        if (dias < 0) {
+          const mesAnterior = new Date(
+            agora.getFullYear(),
+            agora.getMonth(),
+            0
+          );
+          dias += mesAnterior.getDate();
+          meses--;
+        }
+        if (meses < 0) {
+          meses += 12;
+          anos--;
+        }
+        document.getElementById(
+          "contador"
+        ).textContent = `| ${anos} Anos |\n${meses} Meses |\n${dias} Dias | ${horas} Horas     | ${minutos} Minutos | ${segundos} Segundos`;
+      }
+      setInterval(atualizarContador, 1000);
+      atualizarContador();
+    </script>
+
+
+    <script> //emoji coração
+      // Função para criar corações
+      function createHeart() {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.textContent = "❤️";
+        // posição horizontal aleatória
+        heart.style.left = Math.random() * 100 + "vw";
+        // duração da animação aleatória
+        const duration = Math.random() * 5 + 5; // 2 a 5 segundos
+        heart.style.animationDuration = duration + "s";
+        // tamanho aleatório (pequeno)
+        heart.style.fontSize = Math.random() * 10 + 12 + "px";
+        document.querySelector(".hearts").appendChild(heart);
+        // remover coração depois de cair
+        setTimeout(() => {
+          heart.remove();
+        }, duration * 1000);
+      }
+      // Criar corações continuamente
+      setInterval(createHeart, 300);
+    </script>
+
+  <script> //emoji apaixonado
+    function createSmiley() {
+    const smile = document.createElement("div");
+    smile.classList.add("smile");
+    smile.textContent = "😍";
+    // posição horizontal aleatória
+    smile.style.left = Math.random() * 100 + "vw";
+    // duração da animação aleatória
+    const duration = Math.random() * 5 + 5; // 2 a 5 segundos
+    smile.style.animationDuration = duration + "s";
+    // tamanho aleatório
+    smile.style.fontSize = Math.random() * 10 + 12 + "px";
+    document.querySelector(".hearts").appendChild(smile);
+    // remover emoji depois de cair
+    setTimeout(() => {
+      smile.remove();
+    }, duration * 1000);
+  }
+    // Criar emojis continuamente
+    setInterval(createSmiley, 300); // você pode ajustar o intervalo
+  </script>
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
